@@ -18,3 +18,22 @@ obs.: MÉTODOS http: requisições(funções) get para buscar uma ou mais inform
 obs.: tipos de PARÂMETROS: - Request param: parâmetros que vem na própria rota que identificam um recurso. 
                            - Query param: parâmetro opcionais que servem para filtrar, fazer paginação, etc.
                            - Request body: parâmetros para criação e atualização de informações 
+obs.: vai utilizar knex e sqlite;
+13- instalar o knex npm install knex e instalar npm sqlite3
+14- mapeamento de tabela e campos:
+    -points (pontos de coleta)
+        -image
+        -name
+        -email
+        -whatsapp
+        -latitude
+        -longitude
+        -city
+        -uf
+    -items (itens para coleta)    
+        -image 
+        -title
+    -point_items(relacionamento dos itens que um ponto coleta)
+        -point_id
+        -item_id
+    -É um relacionamento de N-N que gera a tabela Pivot.
