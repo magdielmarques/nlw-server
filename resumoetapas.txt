@@ -12,4 +12,9 @@ Obs.: Typescript é Js com tipagem.
 9- instalar pacote npm install typescript -D
 10- criar arquivo de configuração do typescript através de npx tsc --init 
 11- instalar pacote npm install ts-node-dev -D ... serve para atualizar automaticamente as atualizações do código 
-12- configurar o script dev no package.json para exetuar com npm run dev ... "dev": "ts-node-dev src/server.ts"
+12- configurar o script dev no package.json para exetuar com npm run dev ... "dev": "ts-node-dev src/server.ts";
+obs.: ROTA é o endereço completo da requisição e RECURSO é a entidade que está sendo acessada;
+obs.: MÉTODOS http: requisições(funções) get para buscar uma ou mais informações, post criar uma nova informação, put para atualizar uma informação existente no back-end e delete para remover uma informação do back-end;
+obs.: tipos de PARÂMETROS: - Request param: parâmetros que vem na própria rota que identificam um recurso. 
+                           - Query param: parâmetro opcionais que servem para filtrar, fazer paginação, etc.
+                           - Request body: parâmetros para criação e atualização de informações 
