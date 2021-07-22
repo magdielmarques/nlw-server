@@ -1,0 +1,15 @@
+1- Instalar Node 
+2- Instalar VS Code - adicionar extensçoes Dracula e material icon theme
+Obs.:Criar uma API RESTful: segue padrão REST. Back-end criado com Node.js.
+Obs.: Front-end com ReactJs(html e css) e para React Native para mobile.
+Obs.: Typescript é Js com tipagem.
+3- Criar pasta e inicializar projeto dentro: npm init -y ... o "-y" é para aceitar todos os parâmetros
+4- Instalar biblioteca express npm install express ... utilizado para lidar com rotas 
+5- Criar pasta src ... local onde armazena todo o código da aplicação
+6- Criar arquivo server.ts dentro da pasta
+7- importar express dentro da pasta server e instalar a definição de tipos da biblioteca npm install @types/express -D ... -D serve para dizer que é uma dependência de desenvolvimento 
+8- instalar pacote npm intall ts-node  -D
+9- instalar pacote npm install typescript -D
+10- criar arquivo de configuração do typescript através de npx tsc --init 
+11- instalar pacote npm install ts-node-dev -D ... serve para atualizar automaticamente as atualizações do código 
+12- configurar o script dev no package.json para exetuar com npm run dev ... "dev": "ts-node-dev src/server.ts"
