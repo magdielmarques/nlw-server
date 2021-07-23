@@ -37,3 +37,13 @@ obs.: vai utilizar knex e sqlite;
         -point_id
         -item_id
     -É um relacionamento de N-N que gera a tabela Pivot.
+
+15- Criar tabelas usando knex utilizando recurso chamado migrations. Migration é o histórico do banco de dados;
+16- criar pastas migrations, criar arquivos em sequência correta para não ocorer erro; export funções async up e down dentro das funções; função up serve para realizar alterações necessárias no banco e função down serve para voltar atrás(deletar a tabela criada); Essas funções recebem como parâmetro a instância do próprio knex.
+Obs.: _dirname retorna a raiz do diretório 
+17- configurar knex pelo npx init knex ou criando o arquivo knexfile.ts dentro da pasta raiz
+19- instalar pacote sqlite que auxiliar a trabalhar com sqlite dentro do projeto  
+20- dar comando ctrl+shift+p e escolher o banco de dados para habilitar sqlite explorer 
+21- colocar flag useNullAsDefault: true  em knexfile e connection.ts
+22- configurar em package.json "knex:migrate": "knex migrate:latest --knexfile knexfile.ts migrate:latest"
+23- criar migrations e executar comando npm run knex:migrate
