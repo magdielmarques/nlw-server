@@ -52,4 +52,10 @@ Obs.: _dirname retorna a raiz do diretório
                                   um ponto de coleta especifíco 
 25- Primeiro criar funcionalidade para cadastrar. Obs.: Como quero cadastrar funcionalidades pré-existentes 
 em meu banco de dados vou utilizar a função Seed do Knex;
+Obs.: npm install checks verifica o arquivo packege.json e instala 
+26- criar seeds
+27- configurar knexfile.ts
+28- criar rota
+29- fazer serialização de dados na rota /items para devolver para front-end
+30- 
                                   
