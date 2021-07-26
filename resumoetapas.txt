@@ -47,3 +47,9 @@ Obs.: _dirname retorna a raiz do diretório
 21- colocar flag useNullAsDefault: true  em knexfile e connection.ts
 22- configurar em package.json "knex:migrate": "knex migrate:latest --knexfile knexfile.ts migrate:latest"
 23- criar migrations e executar comando npm run knex:migrate
+24- Funcionalidades da aplicação: WEB - Cadastro de ponto de coleta e Lista de itens de coleta
+                                  Mobile: listar pontos (filtro por estado, cidade e itens) e listar
+                                  um ponto de coleta especifíco 
+25- Primeiro criar funcionalidade para cadastrar. Obs.: Como quero cadastrar funcionalidades pré-existentes 
+em meu banco de dados vou utilizar a função Seed do Knex;
+                                  

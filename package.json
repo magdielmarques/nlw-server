@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000s\u0000e\u0000r\u0000v\u0000e\u0000r\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev src/server.ts",
@@ -20,5 +20,13 @@
     "ts-node": "^10.1.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magdielmarques/server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/magdielmarques/server/issues"
+  },
+  "homepage": "https://github.com/magdielmarques/server#readme"
 }
