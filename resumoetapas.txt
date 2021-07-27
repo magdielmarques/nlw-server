@@ -55,7 +55,9 @@ em meu banco de dados vou utilizar a função Seed do Knex;
 Obs.: npm install checks verifica o arquivo packege.json e instala 
 26- criar seeds
 27- configurar knexfile.ts
-28- criar rota
+28- criar rota /items (get)
 29- fazer serialização de dados na rota /items para devolver para front-end
-30- 
-                                  
+30- criar rota /points (post)
+31- criar rotas
+obs.: é padrão quando existe um controller  ter os métodos no formato de index: listagem, show: exibir unico registro, create, update e delete
+obs.: estudar estrutura de organizar o cógido 
