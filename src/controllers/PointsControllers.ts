@@ -2,7 +2,21 @@ import {Request, Response} from 'express';
 import knex from "../database/connection";
 
 class PointsController {
+    async show (request: Request, response: Response) {
+        const id = request.params.id
+        //const { id } = request.parms;
+        const point = await knex('points').where('id', id).first();
+
+        if(!point) {
+            return response.status(400).json({ message: 'Point not found.' })
+        }
+
+        return  response.json(point);
+    }
+
     async create (request: Request, response: Response) {
+        const trx = await knex.transaction();
+        
         const {
             name,
             email,
@@ -12,22 +26,22 @@ class PointsController {
             city,
             uf,
             items
+            /*const name = request.body.name
+            const email = request.body.email
+            */
         } = request.body;
     
-        const trx = await knex.transaction();
-        /*const name = request.body.name
-        const email = request.body.email
-        */
         const point = {
             image: 'image-fake',
-            name,/*name: name não é necessário com short sintax, quando o nome da váriavel é igual ao nome da propriedade do objeto*/
+            name,
             email,
             whatsapp,
             latitude,
             longitude,
             city,
             uf
-        }
+            /*name: name não é necessário com short sintax, quando o nome da váriavel é igual ao nome da propriedade do objeto*/
+        };
 
         const insertedIds = await trx('points').insert(point);
     
