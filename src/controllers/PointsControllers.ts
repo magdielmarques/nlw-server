@@ -15,8 +15,7 @@ class PointsController {
     }
 
     async create (request: Request, response: Response) {
-        const trx = await knex.transaction();
-        
+                
         const {
             name,
             email,
@@ -43,22 +42,25 @@ class PointsController {
             /*name: name não é necessário com short sintax, quando o nome da váriavel é igual ao nome da propriedade do objeto*/
         };
 
-        const insertedIds = await trx('points').insert(point);
-    
-        const point_id = insertedIds[0];
-    
-        const pointItems = items.map((item_id: number) => {
+        //const trx = await knex.transaction();
+        
+        const insertedIds = await knex('points').insert(point);
+        
+        const  point_id = insertedIds[0] ;
+
+        const pointItems = await items.map((item_id: number) => {
             return {
                 item_id,
-                point_id,
+                point_id
             };
-        })
+        });
     
-        await trx('point_items').insert(pointItems);
+        await knex('point_items').insert(pointItems);
     
         return response.json({
             id: point_id,
             ...point
+            //success: true
         });
     }
 }
