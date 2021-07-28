@@ -61,3 +61,4 @@ Obs.: npm install checks verifica o arquivo packege.json e instala
 31- criar rotas
 obs.: é padrão quando existe um controller  ter os métodos no formato de index: listagem, show: exibir unico registro, create, update e delete
 obs.: estudar estrutura de organizar o cógido 
+32- installar npm install cors

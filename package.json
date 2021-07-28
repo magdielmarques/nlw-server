@@ -4,7 +4,7 @@
   "description": "��#\u0000 \u0000s\u0000e\u0000r\u0000v\u0000e\u0000r\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
+    "dev": "ts-node-dev --unhandled-rejections=strict --ignore-watch node_modules src/server.ts",
     "knex:seed": "knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
   },
@@ -13,11 +13,13 @@
   "license": "ISC",
   "dependencies": {
     "checks": "^1.2.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.95.7",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "ts-node": "^10.1.0",
     "ts-node-dev": "^1.1.8",
